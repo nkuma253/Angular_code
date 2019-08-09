@@ -1,0 +1,18 @@
+<h4>
+  Update Product
+</h4>
+<a routerLink = "/" class="btn btn-info">Home </a>
+<p *ngIf = "!exist">
+  Product doesn't exist
+</p>
+<div class="form">
+	<form id = "formNewProduct" name = "formNewProduct" #productData = "ngForm" (ngSubmit) = "updateProduct(productData.value)">
+	  <label>Please update your first name</label><input type = "text" class="form-control" name="fname" id="fname"  [(ngModel)] = "data.first_name" ngModel><br>
+	  <label>Please update your last name</label><input type = "text" class="form-control" name="lname" id="lname" [(ngModel)] = "data.last_name"  ngModel><br>
+	  <label>Please update your email address</label><input type = "text" class="form-control" name="email" id="email" [(ngModel)] = "data.email"  ngModel><br>
+	  <label>Please update your mobile number</label><input type = "text" class="form-control" name="mobile" id="mobile" [(ngModel)] = "data.mobile" maxlength="10"  ngModel><br>
+	  <div class="text-right"><input type="submit" class="btn btn-primary" value = "Update Product"></div>
+</form>
+</div>
+
+

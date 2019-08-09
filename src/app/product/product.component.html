@@ -1,0 +1,18 @@
+<a routerLink = "/" class="btn btn-info">Home </a>
+
+<h4>
+  Add new employee details
+</h4>
+<div class="form">
+	<form id = "formNewProduct" name = "formNewProduct" #productData = "ngForm" (ngSubmit) = "addNewProduct(productData.value)">
+	  <label>Please enter your first name</label><input type = "text" class="form-control" name="fname" id="fname" placeholder="first name" ngModel><br>
+	  <label>Please enter your last name</label><input type = "text" class="form-control" name="lname" id="lname" placeholder="last name" ngModel><br>
+	  <label>Please enter your email address</label><input type = "text" class="form-control" name="email" id="email" placeholder="email address" ngModel><br>
+	  <label>Please enter your mobile number</label><input type = "text" class="form-control" name="mobile" id="mobile" placeholder="mobile number" maxlength="10" ngModel><br>
+	  <div class="text-right"><input type="submit" class="btn btn-primary" value = "Add Product"></div>
+	</form>
+</div>
+
+
+<br>
+<h3 *ngIf = "isAdded" >{{confirmationString}}</h3>
